@@ -127,11 +127,10 @@ def stack_fc():
         i+=1
     return stack
 stack_fc()
-'''
+
 import sys
 line= sys.stdin.readline
 a = int(line())
-
 stack = []
 def stack_match_case():
     i = 0
@@ -166,3 +165,16 @@ def stack_match_case():
                     print(-1)
         i+=1
 stack_match_case()
+'''
+count = 0
+n = 3
+def get_times(n):
+    global count
+    for i in range(1,31):
+        if i % n == 0:
+            count +=1
+    return count
+
+
+get_times(n)
+print(f'\n{n}의 배수의 개수: {count}')
