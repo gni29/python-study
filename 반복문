@@ -1,0 +1,72 @@
+'''a = int(input())
+print(sum([i for i in range(1,a+1)]))
+b = int(input())
+print(sum([i for i in range(1,b+1,2)]))
+a = int(input())
+for i in range(a,0,-1):
+    print( f'{i} ', end= '')
+print('발사')
+
+a = int(input('몇 단을 출력할까요?'))
+for j in range(1,10):
+    print(f'{a} * {j} = {a*j}')
+
+a = [1,2,3,4,5]
+a3  = [i *3 for i in a]
+print(f'a3 = {a3}')
+a4 = [i *3 for i in a if i%2==0]
+print(f'a4 = {a4}')
+
+
+for u in range(3):
+    for x in range(2):
+        print(f'y:{x}, x:{x}')
+    print()
+for i in range(2,10):
+    print(f'[{i} 단]')
+    for j in range(1,10):
+        print(f'{i} X {j} = {i*j}')
+    print()
+
+print('*** 자리배치도 ***')
+customer = int(input('고객수 입력: '))
+row = int(input('좌석 행 수 입력: '))
+
+if customer % row == 0:
+    column = customer // row
+else:
+    column = (customer // row) + 1
+# print(row)
+
+for i in range(0, row):
+  for j in range(1, column + 1):
+    seat = i * column + j
+    if seat > customer:
+      break
+    print(seat, end=" ")
+  print()
+
+a  = int(input('몇 층까지 쌓을까요?:'))
+print('왼쪽정렬')
+for i in range(1,a+1):
+    print(str('*'* i))
+print('오른쪽 정렬')
+for i in range(1,a+1):
+    print(str('*'*i).rjust(10))
+print('가운데 정렬')
+for i in range(1,a+1):
+    n = 2*i -1
+    print(str('*'* n).center(10))
+'''
+
+num_list = list(map(float, input().split()))
+print(f'가장 큰 값 : {max(num_list)}')
+print(f'가장 작은 값 : {min(num_list)}')
+
+num_list.remove(max(num_list))
+num_list.remove(min(num_list))
+print(num_list)
+print(f'나머지 값의 평균 : {sum(num_list)/len(num_list)}')
+
+
+
