@@ -62,10 +62,8 @@ for i in range(1,a+1):
 num_list = list(map(float, input().split()))
 print(f'가장 큰 값 : {max(num_list)}')
 print(f'가장 작은 값 : {min(num_list)}')
-
 num_list.remove(max(num_list))
 num_list.remove(min(num_list))
-print(num_list)
 print(f'나머지 값의 평균 : {sum(num_list)/len(num_list)}')
 
 

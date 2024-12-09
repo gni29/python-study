@@ -65,7 +65,6 @@ for _ in range(M):
     if t in S:
         ans+=1
 print(ans)
-'''
 
 name = ['Alice',"Bob","Charlie"]
 score = [85,90,95]
@@ -78,3 +77,4 @@ print(f'modified Alice : {grade['Alice']}')
 del grade['Bob']
 for k in grade.keys() :
     print(f'{k} : {grade.get(k)}')
+'''

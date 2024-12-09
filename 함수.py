@@ -165,7 +165,7 @@ def stack_match_case():
                     print(-1)
         i+=1
 stack_match_case()
-'''
+
 count = 0
 n = 3
 def get_times(n):
@@ -178,3 +178,83 @@ def get_times(n):
 
 get_times(n)
 print(f'\n{n}의 배수의 개수: {count}')
+
+def pr_str(txt, count=1):
+    for i in range(count):
+        print(txt)
+
+
+pr_str("Hello", 3)
+pr_str("Hello", 3)
+print()
+pr_str("Hello")
+print()
+
+
+def introduce(**kwargs):
+    print(type(kwargs))
+    for key, value in kwargs.items():
+        print(f'{key}:{value}')
+introduce(name = 'Alice', age = 25, city = 'New York')
+
+def hello():
+    global count
+    count +=1
+    print('hello')
+    if count < 4:
+        count +=1
+        hello()
+count = 0
+hello()
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+print(factorial(5))
+
+def fibo(n):
+    if n <= 2:
+        return 1
+    else :
+        return fibo(n-2)+fibo(n-1)
+
+memory = {1:1, 2:1}
+def fibo_memo(n):
+    if n in memory:
+        return memory[n]
+    else:
+        memory[n]   = fibo_memo(n-2) +fibo_memo(n-1)
+        
+    return memory[n]
+print(fibo_memo(100))
+
+def fibo_opt(n):
+    if n <= 1:
+        return n
+    d = [0]*(n+1)
+    d[1] = 1
+    for i in range(2, n+1):
+        d[i] = d[i-1]+d[i-2]
+    return d[n]
+print(fibo_opt(100))
+
+def fibonacci_tail_recursive(n, a=0, b=1):
+    if n == 0:
+        return a
+    if n == 1:
+        return b
+    return fibonacci_tail_recursive(n - 1, b, a + b)
+
+print(fibonacci_tail_recursive(10))  # 55
+
+
+result = map(lambda x:3*x,([1,2,3,4]))
+print(list(result))
+
+value = list(filter(lambda x : x<0, ([-5,1,2,-11,76])))
+print(value)
+
+value = list(filter(lambda x : x >= 3,map(lambda x : 2*x,([-5,1,2,-11,76]))))
+print(value)
+'''

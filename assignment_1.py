@@ -1,4 +1,4 @@
-'''
+
 ## 1-1
 n = int(input())
 a = [i for i in range(1,n+1)]
@@ -14,7 +14,7 @@ if beverage in vending_machine:
     print(f'{beverage} 드릴게요')
 else :
     print(f'{beverage} 지금은 없네요')
-'''
+
 ## 3
 
 vending_machine = ['게토레이','게토레이','레쓰비','레쓰비','생수','생수','생수','이프로']

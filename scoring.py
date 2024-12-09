@@ -9,5 +9,5 @@ elif 90 > score:
     print('B')
 elif 100 >= score :
     print('A')
-else :
+if 100 < score :
     print('점수가 100보다 큽니다.')
