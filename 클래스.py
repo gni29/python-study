@@ -144,7 +144,7 @@ c  = calculation(5,3)
 print(f'add : {c.add()}, sub : {c.sub()}, mul : {c.mul()}, div : {c.div()}')
 c  = calculation(4,0)
 print(f'add : {c.add()}, sub : {c.sub()}, mul : {c.mul()}, div : {c.div()}')
-'''
+
 class Employee:
     serial_num = 1000
     def __init__(self,name):
@@ -163,3 +163,88 @@ print(e3)
 employee = [Employee('구름'),Employee('별'),Employee('행성'),Employee('달')]
 for i in range(len(employee)):
     print(employee[i])
+
+
+class Supermarket :
+    count = 0
+    def __init__(self,location,name, product, customer):
+        self.__location = location
+        self.__name = name
+        self.__product = product
+        self.__customer = customer
+        Supermarket.count +=1
+    def print_location(self):
+        print(self.__location)
+    def change_category(self,category):
+        self.__product = category
+    def show_list(self):
+        print(self.__product)
+    def enter_customer(self):
+        self.__customer +=1
+    def show_info(self):
+        print(f'가게이름 : {self.__name}, 위치 : {self.__location}, 파는 물건 : {self.__product}, 손님 수 :{self.__customer}')
+    def show_supermarket_count(self):
+        print(Supermarket.count)
+emart = Supermarket('seoul','emart','computer',100)
+emart.show_list()
+emart.change_category('전자제품')
+emart.enter_customer()
+emart.show_supermarket_count()
+emart.show_list()
+emart.show_info()
+homeplus = Supermarket('busan','homeplus','home',1000)
+homeplus.show_supermarket_count()
+
+
+class Country:
+    def __init__(self):
+        self.name = '대한민국'
+        self.population = '5000'
+        self.capital = '서울'
+    def show(self):
+        print('국가 클래스의 메소드입니다.')
+
+class Korea(Country):
+    def __init__(self,name):
+        self.name = name
+    def show_name(self):
+        print('국가 이름은 : ', self.name)
+    
+country = Korea("대한민국")
+country.show()
+print(country.name)
+country.show_name()
+'''
+class calculator:
+    def __init__(self,a,b):
+        self.__a = a
+        self.__b = b
+    def add(self):
+        return self.__a+self.__b
+    def sub(self):
+        return self.__a -self.__b
+    def div(self):
+        if self.__b != 0:
+            return self.__a/self.__b
+        elif self.__b == 0 :
+            return None
+    def mul(self):
+        return self.__a*self.__b
+
+c  = calculator(5,3)
+print(f'add : {c.add()}, sub : {c.sub()}, mul : {c.mul()}, div : {c.div()}')
+c  = calculator(4,0)
+print(f'add : {c.add()}, sub : {c.sub()}, mul : {c.mul()}, div : {c.div()}')
+
+class calculator:
+    def __init__(self):
+        self.value = 100
+    def sub(self,value):
+        self.value -= value
+class MinLimitCalcualtor(calculator):
+
+    def sub(self,value):
+        self.value = max(0,self.value-value)
+c = MinLimitCalcualtor()
+print(c.sub(90))
+print(c.sub(90))
